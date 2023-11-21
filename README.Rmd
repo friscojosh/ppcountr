@@ -1,5 +1,17 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # ppcountr
 
@@ -8,20 +20,15 @@
 
 ## Purpose
 
-In one of my leagues we use potential points to determine draft order.
-MyFantasyLeague does not use players from Taxi Squad or IR to calcluate
-the top 21 players. I wrote this package to remedy that.
+In one of my leagues we use potential points to determine draft order. MyFantasyLeague does not use players from Taxi Squad or IR to calcluate the top 21 players. I wrote this package to remedy that.
 
-The optimizer used to find the top 21 uses constraints that are specific
-to my league, but they can be updated pretty easily to match whatever
-roster constraints your league uses. See `solve_for_pp` and
-`calculate_top_21`.
+The optimizer used to find the top 21 uses constraints that are specific to my league, but they can be updated pretty easily to match whatever roster constraints your league uses. See `solve_for_pp` and `calculate_top_21`.
 
 ## Installation
 
 You can install the development version of ppcountr like so:
 
-``` r
+```{r install}
 # install.packages("devtools")
 # devtools::install_github("friscojosh/ppcountr")
 ```
@@ -30,7 +37,7 @@ You can install the development version of ppcountr like so:
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
+```{r example}
 # library(ppcountr)
 # api_key <- "Your API Key"
 # league_id <- "Your league ID"
@@ -43,3 +50,4 @@ This is a basic example which shows you how to solve a common problem:
 # afc_pp
 # nfc_pp
 ```
+
